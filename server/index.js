@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const app = express()
-const port = 3000
+const port = 5000
 const { User } = require("./models/Users")
 const { auth } = require("./middleware/auth")
 const config = require('./config/key')
@@ -18,6 +18,8 @@ mongoose.connect(config.mongoURI,{
 
 app.get('/', (req, res) => res.send('반갑다'))
 
+app.get('/api/hello', (req,res)=> res.send('hello~~ world!!'))
+
 app.post('/api/users/register',(req,res)=>{ //아이디 비번을 데베에 넣는 작업
     const user = new User(req.body) // body-parser 를 통해 client 가 보내는 정보를 받을 수 있다. 
     user.save((err,userInfo) =>{
@@ -30,12 +32,12 @@ app.post('/api/users/login',(req,res) =>{
     //요청된 이메일이 데이터 베이스에 있는지 찾는다.
     User.findOne({email : req.body.email },(err,user)=>{
         if(!user){
-            return req.json({loginsuccess : false, msg : "제공된 이메일에 해당되는 유저가 없습니다."})
+            return res.json({loginsuccess : false, msg : "제공된 이메일에 해당되는 유저가 없습니다."})
         }
         //요청된 이메일이 데이터 베이스에 있을시, 요청된 비밀번호가 맞는지 확인한다
         user.comparePassword(req.body.password , (err,isMatch) => { //메소드를 유저 모델에서 만들면 된다
             if(!isMatch)
-                return req.json({loginsuccess: false, msg: "비밀번호가 틀렸습니다."})  
+                return res.json({loginsuccess: false, msg: "비밀번호가 틀렸습니다."})  
             //비밀번호까지 맞다면 token을 생성
             user.generateToken((err,user) => {
                 if(err) return res.status(400).send(err)
