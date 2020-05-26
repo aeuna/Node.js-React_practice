@@ -1,0 +1,12 @@
+.list_info{
+    border: 1px solid black;
+    padding: 8px;
+    margin: 8px;
+    width: 60vw;
+    height: 100vh;
+    background-color : #BDBDBD;
+    display: flex;
+    flex-wrap : wrap;
+    align-content: flex-start;
+}
+

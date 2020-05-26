@@ -9,6 +9,10 @@ import {
 import LandingPage from './components/views/LandingPage/LandingPage'
 import LoginPage from './components/views/LoginPage/LoginPage'
 import RegisterPage from './components/views/RegisterPage/RegisterPage'
+import Pos from './components/views/Pos'
+import MenuAdd from './components/views/MenuAdd'
+import modal from './components/views/modal';
+import test from './components/views/test'
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
         <Route exact path="/" component = {LandingPage} />
         <Route exact path="/login" component = {LoginPage} />
         <Route exact path="/register" component = {RegisterPage} />
+        <Route exact path="/menuadd" component = {MenuAdd} />
+        <Route exact path="/pos" component = {Pos} />
+        <Route exact path="/modal" component = {modal} />
+        <Route exact path="/test" component = {test} />
       </Switch>
     </div>
   </Router>
