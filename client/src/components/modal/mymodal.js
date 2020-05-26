@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import './mymodal.css';
-import MenuAdd from './MenuAdd'
+import MenuAdd from '../MenuAdd'
 
 
 class mymodal extends Component {

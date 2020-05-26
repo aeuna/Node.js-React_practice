@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // import PosForm from './PosForm';
 import PosList from './PosList';
-import PosNavbar from './PosNavbar';
-import Receipt from './Receipt'
-import ReceiptList from './ReceiptList'
+import PosNavbar from '../Navbar/PosNavbar';
+import Receipt from '../Receipt/Receipt'
+import ReceiptList from '../Receipt/ReceiptList'
 import './Pos.css'
 
 class Pos extends Component {

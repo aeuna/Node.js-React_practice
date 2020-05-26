@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import './PosNavbar.css'
-import MyModal from './mymodal';
-import ModalPortal from './ModalPortal'
+import MyModal from "../modal/mymodal";
+import ModalPortal from '../modal/ModalPortal'
 
 export default class PosNavbar extends Component {
     state = {
