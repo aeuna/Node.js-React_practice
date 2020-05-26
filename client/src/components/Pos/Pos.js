@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import PosForm from './PosForm';
 import PosList from './PosList';
 import PosNavbar from '../Navbar/PosNavbar';
-import Receipt from '../Receipt/Receipt'
 import ReceiptList from '../Receipt/ReceiptList'
 import './Pos.css'
 
@@ -60,11 +59,13 @@ class Pos extends Component {
     const { menu } = this.state
     // console.log("pos.js");
     // console.log(data);
-    this.state.menu = data
+    // this.state.menu = data
+    // this.setState(data)
+      
     // console.log("state 확인");
-    // console.log(this.state.menu)
-    // const { menu } = this.state.menu;
-    // this.setState({
+    // console.log(this.state.menu) 
+    // const { menu } = this.state.menu; here
+    // this.setState({ here
     //     menu = data
     // })
     this.setState({
