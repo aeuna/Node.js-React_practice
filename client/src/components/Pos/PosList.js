@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PosForm from './PosForm'
 import './PosList.css'
+import { Link } from "react-router-dom"
 
 export class PosList extends Component {
   static defaultProps = {
@@ -8,24 +9,28 @@ export class PosList extends Component {
   }
   handleClickEvent = (data) => {
     this.props.getInfo(data)
-    // console.log("PosList.js");
-    // console.log(data);
   }
   render() {
+    console.log("자식에게 잘도착했는가?")
+    console.log(this.props.goData)
+
     const { data } = this.props;
-    // console.log("what is this?")
-    // console.log(data)
     const list = data.map(
       info => (<PosForm onGetInfo={this.handleClickEvent} key={info.id} info={info} />)
     );
-
     return (
       <div className="big">
         <div className="list_info">
           {list}
         </div>
         <div className="btn">
-          <button class="button">현금</button>
+          <Link to={{
+            pathname: '/store',
+            state: {
+              order : this.props.goData
+            }
+          }}>
+            <button class="button">현금</button></Link>
           <button class="button">카드</button>
         </div>
       </div>

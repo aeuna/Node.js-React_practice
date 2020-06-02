@@ -9,14 +9,16 @@ export default class ReceiptList extends Component {
         data: []
     }
     render() {
+
         const { data } = this.props;
+
         const list = data.map(
             info => (<Receipt key={info.id} info={info} />)
         );
+
         if(ch===1) {
             total =0
             for(var i=0; i < list.length; i++){
-                console.log(data[i].price)
                 total += parseInt(data[i].price)
             }
         }

@@ -1,0 +1,82 @@
+.order__Receipt{
+    justify-content : center;
+    align-items : center;
+    display : block;
+    height: 150vh;
+    float: right;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+}
+
+.title_container {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: white;
+}
+
+.title {
+    padding-left : 30px;
+}
+
+.ordering{
+    background-color: #f0f6f9;
+    width:100%;
+    height:100%;
+
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.table_order {
+    border: 1px solid black;
+    padding: 8px;
+    margin: 20px;
+    width: 350px;
+    height: 350px;
+    background-Color: white;
+}
+
+.table_menu {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    display: flex;
+    padding: 0px 10px;
+}
+
+.table_menu.menu{
+    font-size: 17px;
+}
+
+.menu_detail {
+    height: 240px;
+    overflow: scroll;
+}
+
+.menus {
+    height: 290px;
+}
+
+.price_order{
+    width:50%;
+}
+
+.price_order.total{
+    text-align: right;
+}
+
+.table_button{
+    text-align: center;
+}
+
+.order_btn{
+    border-radius: 15px;
+}
+
+button:focus {
+    outline: none;
+  }

@@ -1,0 +1,76 @@
+.sideMenu {
+    display : block;
+    position : fixed;
+    float : left;
+    top : 0;
+    left : 0;
+    width : 250px;
+    height : 100vh;
+    background: rgb(24, 32, 46);
+}
+
+.sideMenu .logo__container {
+    display : block;
+    padding : 10px;
+    background :#EE5A24;
+}
+
+.sideMenu .logo__container .logo {
+    color: white;
+    text-align: center;
+}
+
+.sideMenu .user__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20vh;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.sideMenu .user__info .user__profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: white;
+}    
+
+.sideMenu .user__info .user__name {
+    margin-top: 20px;
+}
+
+.sideMenu .user__info .user__email {
+    margin-top: 10px;
+}
+
+.sideMenu .user__info .user__name span {
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+.sideMenu .user__info .user__email span {
+    color: gray;
+}
+
+
+.sideMenu .menu__container .--menu {
+    background: #2B3C58;
+    padding: 20px;
+}
+
+
+.menu__container .--menu span {
+    margin-left : 20px;
+    color : white;
+}
+
+.menu__container .--menu :hover {
+    opacity : 0.5;
+}
+
+.sideMenu .menu__container hr {
+    color: gray;
+    margin: 0;
+}

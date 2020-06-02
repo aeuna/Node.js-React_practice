@@ -1,0 +1,82 @@
+.title__container {
+    display : flex;
+    justify-content : space-between;
+    .order__add {
+        margin-right : 20px;
+        border-radius: 20px;
+    }
+    button:hover {
+        background : #f9ca24;
+    }
+}
+
+.hall--space { //here
+    padding : 20px;
+    display : grid;
+    grid-template-columns : repeat(2, 1fr);
+    grid-gap : 100px;
+    justify-content : center;
+    align-items : center;
+    background-color: #f0f6f9;
+    
+    .hall--table {
+        background : gray;
+        height : 180px;
+        display : flex;
+        flex-direction : column;
+        justify-content : center;
+        align-items : center;
+        .order__table {
+            display : flex;
+            flex-direction : column;
+            justify-content : center;
+            align-items : center;
+            line-height : 2rem;
+        }
+    }
+    .--in {
+        background : #f39c12;
+    }
+}
+
+.order__modal {
+    .add {
+        display : flex;
+        align-items : center;
+        select {
+            margin-left : 20px;
+            height : 30px;
+        }
+        .selectCount {
+            height : 25px;
+            margin-left : 10px;
+            padding-left : 5px;
+        }
+        button {
+            width : 30px;
+            height : 30px;
+            border-radius : 15px;
+            margin-left : 10px;
+            border : 1px solid blue;
+            font-size : 20px;
+        }
+        button:hover {
+            color : white;
+            background : blue;
+        }
+    }
+    .result {
+        padding : 20px 0px;
+        min-height : 100px;
+        h3 {
+            margin-bottom : 10px;
+        }
+        .resultdiv {
+            margin-left : 20px;
+            margin-bottom : 10px;
+        }
+    }
+    .resultTotal {
+        margin : 20px 0px;
+    }
+}

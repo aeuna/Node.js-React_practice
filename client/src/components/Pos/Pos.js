@@ -6,43 +6,43 @@ import ReceiptList from '../Receipt/ReceiptList'
 import './Pos.css'
 
 class Pos extends Component {
-    id = 2
-    state = {
-      information : [
-        {
-          id :0,
-          name: '사이다',
-          price: '2000'
-        },
-        {
-          id :1,
-          name: '콜라',
-          price: '3000'
-        },
-        {
-            id :2,
-            name: '사이',
-            price: '4000'
-        },
-        {
-            id :3,
-            name: '콜라',
-            price: '2000'
-        },
-        {
-            id :4,
-            name: '사이다',
-            price: '2000'
-        },
-        {
-            id :5,
-            name: '콜라',
-            price: '2000'
-        }
-      ]
-      ,
-      menu : []
-    }
+  id = 6
+  state = {
+    information: [
+      {
+        id: 0,
+        name: '떡볶이',
+        price: '2000'
+      },
+      {
+        id: 1,
+        name: '순대',
+        price: '3000'
+      },
+      {
+        id: 2,
+        name: '튀김',
+        price: '4000'
+      },
+      {
+        id: 3,
+        name: '콜라',
+        price: '2000'
+      },
+      {
+        id: 4,
+        name: '사이다',
+        price: '2000'
+      },
+      {
+        id: 5,
+        name: '환타',
+        price: '2000'
+      }
+    ]
+    ,
+    menu: []
+  }
   handleCreate = (data) => {
     const { information } = this.state; //here
     this.setState({
@@ -51,42 +51,26 @@ class Pos extends Component {
   }
 
   handleData = (data) => {
-    // console.log(data);
     this.handleCreate(data);
   }
 
   handleGetInfo = (data) => {
+    const { number } = this.props.match.params
     const { menu } = this.state
-    // console.log("pos.js");
-    // console.log(data);
-    // this.state.menu = data
-    // this.setState(data)
-      
-    // console.log("state 확인");
-    // console.log(this.state.menu) 
-    // const { menu } = this.state.menu; here
-    // this.setState({ here
-    //     menu = data
-    // })
     this.setState({
-        menu : menu.concat({ id: this.id++ ,name: data.name, price: data.price, value: 1})
-      })
-    // console.log("최종확인")
-    // console.log(this.state.menu.name)
-    // console.log(this.state.menu.price)
-    // console.log(this.state.menu.id)
+      menu: menu.concat({ id: this.id++, name: data.name, price: data.price, value: 1, table_number: number })
+    })
   }
-  
+
   render() {
     return (
-        <div>
-            <PosNavbar getData={this.handleData}/>
-            <div className="container_content">
-                {/* <Receipt godata={this.state.menu}/> */}
-                <ReceiptList data={this.state.menu}/>
-                <PosList data={this.state.information} getInfo={this.handleGetInfo}/>
-            </div>
+      <div>
+        <PosNavbar getData={this.handleData} />
+        <div className="container_content">
+          <ReceiptList data={this.state.menu}  />
+          <PosList data={this.state.information} getInfo={this.handleGetInfo}  goData={this.state.menu}/>
         </div>
+      </div>
     );
   }
 }

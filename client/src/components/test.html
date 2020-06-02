@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./test.css" type="text/css">
+    <title>장비시설</title>
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="leftbox">
+            <div class="header">
+                <a href="index.html"><img src="img/logo2.png"></a>
+            </div>
+            <div class="nav">
+                <ul class="nav_list">
+                    <li class="nemo_diff" onclick="location.href='work_manage.html';">
+                        <div class="line">
+                            <img src="img/home_gray.png">
+                        </div>
+                        <div class="line">
+                            <div class="nav_item"><span class="nav_link">나의 근무상황</span></div>
+                        </div>
+                    </li>
+                    <li class="nemo_diff" onclick="location.href='snack_manage.html';">
+                        <div class="line">
+                            <img src="img/snack_gray.png">
+                        </div>
+                        <div class="line">
+                            <div class="nav_item"><span class="nav_link">매점 관리</span></div>
+                        </div>
+                    </li>
+                    <li class="nemo" onclick="location.href='equipment_detail.html'">
+                        <div class="line">
+                            <img src="img/list.png">
+                        </div>
+                        <div class="line">
+                            <div class="nav_item"><span class="nav_link">장비 내역</span></div>
+                        </div>
+                    </li>
+                    <li class="nemo_diff" onclick="location.href='equip_manage.html'">
+                        <div class="line">
+                            <img src="img/hammer_gray.png">
+                        </div>
+                        <div class="line">
+                            <div class="nav_item"><span class="nav_link">장비 관리</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="upbox">
+            <div class="container first">
+                <h1 id="recent_work">장비 내역</h1>
+            </div>
+            <div class="container second">
+                <a href="employee_login.html">로그아웃</a>
+            </div>
+            <div class="container third">
+                <a href="index.html">영화예매페이지로 이동</a>
+            </div>
+        </div>
+        <div id="downbox">
+            <div class="downcontainer">
+                <div class="title_downcontainer">
+                    <span>장비 조회</span>
+                </div>
+                <div class="input_search">
+                    <span>개별번호 :</span>
+                    <form>
+                        <input type="text" id="productcode">
+                        <input type="submit" value="조회">
+                    </form>
+                </div>
+                <div class="wrap">
+                    <table>
+                        <th>상품번호</th>
+                        <th>이름</th>
+                        <th>개별번호</th>
+                        <th>상태</th>
+                        <th>구입일</th>
+                        <th>위치</th>
+                        <tr>
+                            <!-- 첫번째 줄 시작 -->
+                            <td>1000</td>
+                            <td>컵</td>
+                            <td>1</td>
+                            <td>상</td>
+                            <td>2019.11.12</td>
+                            <td>창고</td>
+                        </tr><!-- 첫번째 줄 끝 -->
+                        <tr>
+                            <!-- 두번째 줄 시작 -->
+                            <td>1000</td>
+                            <td>의자</td>
+                            <td>2</td>
+                            <td>하</td>
+                            <td>2019.11.12</td>
+                            <td>마케팅1팀</td>
+                        </tr><!-- 두번째 줄 끝 -->
+                        <tr>
+                            <!-- 셋째 줄 시작 -->
+                            <td>1000</td>
+                            <td>모티커</td>
+                            <td>19</td>
+                            <td>중</td>
+                            <td>2019.11.12</td>
+                            <td>관리팀</td>
+                        </tr><!-- 셋째 줄 끝 -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
