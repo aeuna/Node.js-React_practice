@@ -10,7 +10,7 @@
 .list_info{
     padding: 8px;
     width: 60vw;
-    height: 83.8vh;
+    height: 85vh;
     background-color : #BDBDBD;
     display: flex;
     flex-wrap : wrap;
@@ -19,7 +19,7 @@
 
 .btn{
     width: 60vw;
-    height: 16.7vh;
+    height: 15vh;
     padding: 0px 8px;
 }
 

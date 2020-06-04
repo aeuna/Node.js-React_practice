@@ -16,7 +16,7 @@ export class PosForm extends Component {
     }
     render() {
         const {
-            name, price
+            name, price, id
         } = this.props.info;
 
         return (

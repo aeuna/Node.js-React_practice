@@ -10,6 +10,15 @@ export class  Receipt extends Component {
         const {
             name, price, id, value
         } = this.props.info;
+        console.log("여기여기여기")
+        console.log(name)
+        console.log(price)
+        // total += parseInt(price)
+        // console.log(total)
+        // console.log("얼마인가")
+        // console.log(total-ex)
+        // if(ex == 0)  ex= parseInt(price) 
+        // else ex=total-ex
 
         return (
             <tr>

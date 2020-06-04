@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import './PosNavbar.css'
-import MyModal from "../modal/mymodal";
-import ModalPortal from '../modal/ModalPortal'
+import MyModal from './mymodal';
+import ModalPortal from './ModalPortal'
 
 export default class PosNavbar extends Component {
     state = {
@@ -40,7 +40,7 @@ export default class PosNavbar extends Component {
                                 <li><Link to="#">메뉴수정</Link></li>
                             </ul>
                         </li>
-                        <li className="menuLink"><Link to="#">판매기록</Link></li>
+                        <li className="menuLink"><Link to="#">영수증</Link></li>
                     </ul>
                 </nav>
             </div>
