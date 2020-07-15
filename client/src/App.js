@@ -8,7 +8,8 @@ import {
 
 import Pos from './components/Pos/Pos'
 import MenuAdd from './components/MenuAdd'
-import modal from './components/modal/modal';
+import modal from './components/modal/modal'
+import salerecord from './components/SaleRecord/salerecord'
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
       */}
       <Switch>
         <Route exact path="/menuadd" component = {MenuAdd} />
-        <Route exact path="/pos" component = {Pos} />
+        <Route exact path="/" component = {Pos} />
         <Route exact path="/modal" component = {modal} />
+        <Route exact path="/salerecord" component = {salerecord} />
       </Switch>
     </div>
   </Router>
