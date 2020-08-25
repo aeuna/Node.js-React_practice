@@ -1,0 +1,65 @@
+.user__main {
+  display: block;
+  width: 80%;
+  .map__container {
+    display: flex;
+    flex-direction: column;
+    .title__container {
+      width: 100%;
+      height: 5vh;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      .map--title {
+        padding-left: 30px;
+      }
+    }
+    .map--space {
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #map {
+        width: 80%;
+        height: 90%;
+      }
+    }
+  }
+  .recent__container {
+    //여기를 바꿈
+    background: #feca57;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    h2 {
+      text-align: center;
+    }
+    .recent__place {
+      margin: 10px 10px;
+      background: white;
+      width: 90%;
+      height: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 10px;
+      border-radius: 20px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .user__main {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 100vh;
+  }
+}
